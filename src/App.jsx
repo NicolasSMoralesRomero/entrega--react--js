@@ -7,7 +7,7 @@ function App() {
   return (
     <>
      <Navbar/>
-     <ItemListCointainer saludo={"Bienvenido a la Tienda Nico"}/>
+     <ItemListCointainer greeting={"Bienvenido a la Tienda Nico"}/>
     </>
   )
 }

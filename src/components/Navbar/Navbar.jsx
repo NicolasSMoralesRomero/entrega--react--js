@@ -4,13 +4,15 @@ import CartWidget from '../CartWidget/CartWidget';
 function Navbar() {
     return <div>
         <nav className="navbar">
-            <p>Tienda de Nico</p>
-            <CartWidget/> 
-            <ul ClassName="items">
-                <li>Inicio</li>
-                <li>Productos</li>
-                
-            </ul>
+            <h2>Tienda de Nico</h2>
+            
+            <div ClassName="items">
+                <ul>
+                    <li><a href='#'>Inicio</a></li>
+                    <li><a href='#'>Productos</a></li>
+                    <CartWidget/> 
+                </ul>
+            </div>
             
         </nav>
         
