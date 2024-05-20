@@ -1,13 +1,13 @@
 import './App.css'
-import Navbar from './components/Navbar/Navbar.jsx'
-import ItemListCointainer from './components/ItemListCointainer/ItemListCointainer.jsx'
+import AppRouter from './router/AppRouter.jsx'
+
 
 function App() {
 
   return (
     <>
-     <Navbar/>
-     <ItemListCointainer greeting={"Bienvenido a la Tienda Nico"}/>
+     <AppRouter />
+     
     </>
   )
 }
