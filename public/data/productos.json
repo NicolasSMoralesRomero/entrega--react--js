@@ -4,7 +4,7 @@
         "id": 1,
         "titulo": "El fin de la eternidad",
         "autor": "Isaac Asimov",
-        "categoria": "Ciencia Ficción",
+        "categoria": "ciencia-ficcion",
         "precio": 15.99,
         "descripcion": "Una novela clásica de ciencia ficción que explora los viajes en el tiempo y las consecuencias de manipular el curso de la historia.",
         "imagen": "/imagenes/el-fin-de-la-eternidad-asimov.webp"
@@ -13,7 +13,7 @@
         "id": 2,
         "titulo": "Neuromante",
         "autor": "William Gibson",
-        "categoria": "Ciencia Ficción",
+        "categoria": "ciencia-ficcion",
         "precio": 12.50,
         "descripcion": "Una obra pionera en el género cyberpunk que sigue las aventuras de un hacker en un futuro distópico.",
         "imagen": "/imagenes/neuromante-gibson.webp"
@@ -22,7 +22,7 @@
         "id": 3,
         "titulo": "Dune",
         "autor": "Frank Herbert",
-        "categoria": "Ciencia Ficción",
+        "categoria": "ciencia-ficcion",
         "precio": 18.25,
         "descripcion": "La primera entrega de la saga de ciencia ficción épica que sigue las intrigas políticas y religiosas en un lejano planeta desértico.",
         "imagen": "/imagenes/dune-herbert.webp"
@@ -31,7 +31,7 @@
         "id": 4,
         "titulo": "1984",
         "autor": "George Orwell",
-        "categoria": "Ciencia Ficción",
+        "categoria": "ciencia-ficcion",
         "precio": 10.75,
         "descripcion": "Una distopía clásica que describe un mundo totalitario donde el gobierno controla todos los aspectos de la vida.",
         "imagen": "/imagenes/1984-orwell.webp"
@@ -40,7 +40,7 @@
         "id": 5,
         "titulo": "Los pilares de la Tierra",
         "autor": "Ken Follett",
-        "categoria": "Histórico",
+        "categoria": "historico",
         "precio": 14.99,
         "descripcion": "Una épica novela histórica que sigue la construcción de una catedral en la Edad Media y las vidas entrelazadas de sus personajes.",
         "imagen": "/imagenes/los-pilares-de-la-vida-follett.webp"
@@ -49,7 +49,7 @@
         "id": 6,
         "titulo": "El último reino",
         "autor": "Bernard Cornwell",
-        "categoria": "Histórico",
+        "categoria": "historico",
         "precio": 11.50,
         "descripcion": "El primer libro de la serie Crónicas Sajonas, que narra las luchas por el control de Inglaterra durante el siglo IX.",
         "imagen": "/imagenes/el-ultimo-reino-cornwell.webp"
@@ -58,7 +58,7 @@
         "id": 7,
         "titulo": "El nombre del viento",
         "autor": "Patrick Rothfuss",
-        "categoria": "Histórico",
+        "categoria": "historico",
         "precio": 16.75,
         "descripcion": "La primera parte de la Crónica del Asesino de Reyes, que sigue las aventuras de un joven músico y mago en un mundo de fantasía medieval.",
         "imagen": "/imagenes/el-nombre-del-viento-rothfuss.webp"
@@ -67,7 +67,7 @@
         "id": 8,
         "titulo": "Ángeles y demonios",
         "autor": "Dan Brown",
-        "categoria": "Histórico",
+        "categoria": "historico",
         "precio": 9.99,
         "descripcion": "Un thriller histórico que sigue al profesor de simbología Robert Langdon en una carrera contra el tiempo para detener una conspiración en el Vaticano.",
         "imagen": "/imagenes/angeles-y-demonios-brown.webp"
@@ -76,7 +76,7 @@
         "id": 9,
         "titulo": "El señor de los anillos",
         "autor": "J.R.R. Tolkien",
-        "categoria": "Fantasía",
+        "categoria": "fantasia",
         "precio": 20.99,
         "descripcion": "La obra maestra de fantasía que sigue la búsqueda de un pequeño hobbit para destruir un poderoso anillo y derrotar al Señor Oscuro Sauron.",
         "imagen": "/imagenes/el-senor-de-los-anillos-tolkien.webp"
@@ -85,7 +85,7 @@
         "id": 10,
         "titulo": "Harry Potter y la piedra filosofal",
         "autor": "J.K. Rowling",
-        "categoria": "Fantasía",
+        "categoria": "fantasia",
         "precio": 8.50,
         "descripcion": "El primer libro de la serie Harry Potter, que sigue las aventuras de un joven mago mientras descubre el mundo mágico y lucha contra el malvado Lord Voldemort.",
         "imagen": "/imagenes/harry-potter-rowling.webp"
@@ -94,7 +94,7 @@
         "id": 11,
         "titulo": "La espada del destino",
         "autor": "Andrzej Sapkowski",
-        "categoria": "Fantasía",
+        "categoria": "fantasia",
         "precio": 13.25,
         "descripcion": "El segundo libro de la saga del brujo Geralt de Rivia, que presenta una serie de historias entrelazadas llenas de magia, monstruos y dilemas morales.",
         "imagen": "/imagenes/la-espada-del-destino-sapkowski.webp"
@@ -103,7 +103,7 @@
         "id": 12,
         "titulo": "El ciclo de la luna roja: El señor de los lobos",
         "autor": "José Antonio Cotrina",
-        "categoria": "Fantasía",
+        "categoria": "fantasia",
         "precio": 11.99,
         "descripcion": "La primera entrega de una serie de fantasía que sigue las aventuras de un joven huérfano en un mundo lleno de criaturas mágicas y peligrosas.",
         "imagen": "/imagenes/el-ciclo-de-la-luna-roja-cotrina.webp"
@@ -112,7 +112,7 @@
         "id": 13,
         "titulo": "El código Da Vinci",
         "autor": "Dan Brown",
-        "categoria": "Misterio",
+        "categoria": "misterio",
         "precio": 9.99,
         "descripcion": "Un thriller de misterio que sigue al profesor de simbología Robert Langdon en una búsqueda para descifrar un antiguo secreto que podría sacudir los cimientos del cristianismo.",
         "imagen": "/imagenes/el-codigo-da-vinci-brown.webp"
@@ -121,7 +121,7 @@
         "id": 14,
         "titulo": "El talento de Mr. Ripley",
         "autor": "Patricia Highsmith",
-        "categoria": "Misterio",
+        "categoria": "misterio",
         "precio": 12.50,
         "descripcion": "Una novela de suspense psicológico que sigue al joven estafador Tom Ripley mientras se involucra en una peligrosa intriga de identidades falsas y asesinatos.",
         "imagen": "/imagenes/el-talento-de-mr-ripley-highsmith.webp"
@@ -130,7 +130,7 @@
         "id": 15,
         "titulo": "La chica del tren",
         "autor": "Paula Hawkins",
-        "categoria": "Misterio",
+        "categoria": "misterio",
         "precio": 10.75,
         "descripcion": "Un thriller psicológico que sigue a una mujer divorciada que se obsesiona con una pareja aparentemente perfecta que ve desde el tren, solo para verse envuelta en un misterio de desaparición.",
         "imagen": "/imagenes/la-chica-del-tren-hawkins.webp"
@@ -139,7 +139,7 @@
         "id": 16,
         "titulo": "El silencio de los corderos",
         "autor": "Thomas Harris",
-        "categoria": "Misterio",
+        "categoria": "misterio",
         "precio": 8.99,
         "descripcion": "Un clásico del suspense que sigue al agente del FBI Clarice Starling mientras busca la ayuda del brillante pero peligroso Dr. Hannibal Lecter para atrapar a un asesino en serie.",
         "imagen": "/imagenes/el-silencio-de-los-corderos-harris.webp"

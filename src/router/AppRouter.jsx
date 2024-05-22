@@ -13,7 +13,8 @@ import Navbar from "../components/Navbar/NavBar";
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/" element={< ItemListCointainer />} />
+          <Route path="/" element={< ItemListCointainer greeting={"Bienvenido a la tienda Nico"} />} />
+          <Route path="/category/:id" element={< ItemListCointainer greeting={"Bienvenido a la tienda Nico"} />}/>
         </Routes>
       </BrowserRouter>
     );

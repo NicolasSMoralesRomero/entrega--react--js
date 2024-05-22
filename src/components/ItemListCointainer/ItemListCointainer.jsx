@@ -1,33 +1,46 @@
 import { useState, useEffect } from 'react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import { useParams } from 'react-router-dom';
+import ItemList from '../ItemList/ItemList';
 
 
 const ItemListCointainer = ({greeting}) => {
     const [items, setItems] = useState([])
+    const { id } = useParams()
 
 
+    //Para usar JSON hay que hacer async-await
     useEffect(() => {
-        fetch('/data/productos.json')
-            .then(res => res.json())
-            .then(data => setItems(data.productos))
-    }, [])
+        const fetchData = async () => {
+            try {
+                let response;
+                if (!id) {
+                    await new Promise(resolve => setTimeout(resolve, 500));
+                    response = await fetch('/data/productos.json');
+                } else {
+                    await new Promise(resolve => setTimeout(resolve, 500));
+                    response = await fetch('/data/productos.json');
+                }
+                
+                const data = await response.json();
+                if (!id) {
+                    setItems(data.productos);
+                } else {
+                    const filteredItems = data.productos.filter(item => item.categoria === id);
+                    setItems(filteredItems);
+                }
+            } catch (error) {
+                console.error('Error al obtener los datos:', error);
+            }
+        };
+    
+        fetchData();
+    }, [id]);
 
     return (
         <div>
-            {items.map(item => (
-                <Card key={item.id} style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={item.imagen} />
-                    <Card.Body>
-                        <Card.Title>Titulo: {item.titulo}</Card.Title>
-                        <Card.Text>Categoria: {item.categoria}</Card.Text>
-                        <Card.Text>Precio: ${item.precio}</Card.Text>
-                        <Button variant="primary">Ver más</Button>
-                    </Card.Body>
-            </Card>
-            ))}
-
-            <h1 className='titulo'>{greeting}</h1>
+             <h1>{greeting}</h1>
+             <ItemList items={items}/>
+            
         </div>
 )
 } 
