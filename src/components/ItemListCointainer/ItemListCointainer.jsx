@@ -8,7 +8,6 @@ const ItemListCointainer = ({greeting}) => {
     const { id } = useParams()
 
 
-    //Para usar JSON hay que hacer async-await
     useEffect(() => {
         const fetchData = async () => {
             try {
