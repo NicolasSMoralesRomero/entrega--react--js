@@ -10,9 +10,9 @@ function Item({ item }) {
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={item.imagen} />
                     <Card.Body>
-                        <Card.Title>Titulo: {item.titulo}</Card.Title>
-                        <Card.Text>Categoria: {item.categoria}</Card.Text>
-                        <Card.Text>Precio: ${item.precio}</Card.Text>
+                        <Card.Title>Titulo: {item.title}</Card.Title>
+                        <Card.Text>Categoria: {item.category}</Card.Text>
+                        <Card.Text>Precio: ${item.price}</Card.Text>
                         <Button variant="primary" as={Link} to={`/item/${item.id}`}>Ver más</Button>
                     </Card.Body>
                 </Card>
@@ -20,5 +20,21 @@ function Item({ item }) {
         </div>
     )
 }
+
+/* 
+<div>
+            <div className="card-container">
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src={item.imagen} />
+                    <Card.Body>
+                        <Card.Title>Titulo: {item.title}</Card.Title>
+                        <Card.Text>Categoria: {item.category}</Card.Text>
+                        <Card.Text>Precio: ${item.price}</Card.Text>
+                        <Button variant="primary" as={Link} to={`/item/${item.id}`}>Ver más</Button>
+                    </Card.Body>
+                </Card>
+            </div>
+        </div>
+*/
 
 export default Item;

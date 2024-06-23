@@ -1,16 +1,16 @@
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import React, { useState } from 'react';
 
-function ItemCount () {
-    const [count, setCount] = useState(0);
 
+function ItemCount ({count, handleCount, stock}) {
     const handleIncrement = () => {
-        setCount(count + 1);
+        if(count < stock){
+            handleCount(count + 1);
+        }
     };
 
     const handleDecrement = () => {
         if (count > 0) {
-            setCount(count - 1);
+            handleCount(count - 1);
         }
     };
 
@@ -18,9 +18,9 @@ function ItemCount () {
         <Container>
             <Row>
                 <Col xs={12} md={6} className="d-flex align-items-center justify-content-center">
-                    <Button variant="primary" className="mr-3" onClick={handleIncrement}>+</Button>
+                    <Button variant="primary" onClick={handleDecrement}>-</Button>
                     <p className="m-0 mr-3">{count}</p>
-                    <Button variant="primary" onClick={handleDecrement}>-</Button>                   
+                    <Button variant="primary" className="mr-3" onClick={handleIncrement}>+</Button>                 
                 </Col>
             </Row>
         </Container>

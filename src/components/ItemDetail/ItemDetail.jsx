@@ -1,12 +1,12 @@
 import Detail from "../Detail/Detail";
 
 
-function ItemDetail ({detail}) {
+function ItemDetail ({product}) {
     
     return (
         <>
         
-        <Detail detail={detail}  />
+        <Detail product={product}  />
         </>
     )
 }
