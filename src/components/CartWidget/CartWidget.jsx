@@ -1,8 +1,12 @@
+import { useContext } from 'react';
 import './CartWidget.css';
+import CartContext from '../../context/cart/CartContext';
 
 function CartWidget() {
+    const {totalQuantityCart} = useContext(CartContext)
+
     return <div>
-                <img className='carrito' src="https://icones.pro/wp-content/uploads/2021/05/icone-de-panier-jaune.png" alt="Imagen de un carrito" /><span>0</span>
+                Carrito {totalQuantityCart}
             </div>
 
 }

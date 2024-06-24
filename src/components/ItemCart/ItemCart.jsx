@@ -1,9 +1,14 @@
+import { useContext } from "react";
+import CartContext from "../../context/cart/CartContext";
+
 function ItemCart ({item}) {
+    const {deleteItemCart} = useContext(CartContext)
     
     return (
         <div>
             <h5>{item.title}</h5>
-            <span>{item.cuantity}</span>
+            <span>{item.quantity}</span>
+            <button onClick={()=>deleteItemCart(item.id)}>Eliminar</button>
 
         </div>
     )

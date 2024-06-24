@@ -17,6 +17,7 @@ function NavBar() {
               <Nav.Link as={Link} to='/category/historico'>Histórico</Nav.Link>
               <Nav.Link as={Link} to='/category/fantasia'>Fantasía</Nav.Link>
               <Nav.Link as={Link} to='/category/misterio'>Misterio</Nav.Link>
+              <Nav.Link as={Link} to='/orders'>Ordenes pasadas</Nav.Link>
               <Nav.Link as={Link} to='/cart'><CartWidget /></Nav.Link>
             </Nav>
           </Navbar.Collapse>

@@ -3,18 +3,18 @@ import ItemCount from "../ItemCount/ItemCount";
 import Button from 'react-bootstrap/Button';
 import { useContext, useState } from 'react';
 import CartContext from '../../context/cart/CartContext';
+import { useNavigate } from 'react-router-dom';
 
 function Detail ({product}) {
 
   const [count, setCount] = useState(1);
-
-    const {cart,addItem} = useContext(CartContext)
-    
-    const addItemCart = () => {
-      addItem({...product,cuantity:count})
-
-
-    }
+  const {cart,addItemCart} = useContext(CartContext)
+  const navigate = useNavigate()
+  
+  const addItem = () => {
+    addItemCart({...product,quantity:count})
+    navigate("/cart")
+  }
 
     return (
         <Container className="mt-5">
@@ -38,7 +38,7 @@ function Detail ({product}) {
                 <p className="mt-3">Precio: ${product.price}</p>
                 <ItemCount count={count} handleCount={setCount} stock={product.stock} />
                 <div className="text-center">
-                <Button onClick={addItemCart} variant="primary" className="mt-2">Agregar al carrito</Button>
+                <Button onClick={addItem } variant="primary" className="mt-2">Agregar al carrito</Button>
                 </div>
               </Figure.Caption>
             </Figure>
