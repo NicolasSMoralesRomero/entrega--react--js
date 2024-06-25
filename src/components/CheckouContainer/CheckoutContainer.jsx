@@ -23,11 +23,6 @@ import Swal from 'sweetalert2'
             const db = getFirestore()
             const docRef = collection(db,"orders")
             const result = await addDoc(docRef,order)
-            /* cart.map(async item => {
-                const product = await getProductById(item.id)
-                const docRef = doc(db,"products",item.id)
-                await updateDoc(docRef,{stock:product.stock - item.quantity})
-            }) */
                 clearCart()
                 Swal.fire("El id de su compra es: " + result.id);
             navigate("/orders")
