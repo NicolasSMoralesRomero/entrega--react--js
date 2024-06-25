@@ -1,5 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Dropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function CustomSelect({ handleCategorySelected, categories }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,9 @@ function CustomSelect({ handleCategorySelected, categories }) {
             key={category.id}
             onClick={() => handleOptionClick(category.title)}
           >
-            {category.title}
+            <Link to={`/category/${category.title}`}>
+              {category.title}
+            </Link>
           </Dropdown.Item>
         ))}
       </Dropdown.Menu>

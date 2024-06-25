@@ -1,4 +1,5 @@
 import ItemList from '../ItemList/ItemList';
+import "./ItemListContainer.css"
 
 
 
@@ -9,7 +10,7 @@ const ItemListCointainer = ({greeting}) => {
         <>
             
             <div>
-                <h1>{greeting}</h1>
+                <h1 className='titulo'>{greeting}</h1>
                 <ItemList/>
                 
             </div>
