@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { initializeApp } from "firebase/app"
+import "./fontawesome.js"
 
 const firebaseConfig = {
   apiKey: "AIzaSyBqYFohRw0GYUce1it9Stv8azrkj3s8F78",

@@ -16,6 +16,7 @@ function OrderContainer() {
 
     return (
         <div>
+            <h1>Ordenes pasadas</h1>
             {orders.map(order => <div key={order.id}><p>{order.id}</p></div>)}
             
         </div>

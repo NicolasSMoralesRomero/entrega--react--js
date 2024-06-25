@@ -1,12 +1,13 @@
 import { useContext } from 'react';
-import './CartWidget.css';
 import CartContext from '../../context/cart/CartContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 function CartWidget() {
     const {totalQuantityCart} = useContext(CartContext)
 
     return <div>
-                Carrito {totalQuantityCart}
+               <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />{totalQuantityCart}
             </div>
 
 }

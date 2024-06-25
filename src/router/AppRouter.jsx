@@ -10,6 +10,7 @@ import ItemDetailContainer from "../components/ItemDetailContainer.jsx/ItemDetai
 import ItemCartContainer from "../components/ItemCartContainer/ItemCartContainer";
 import CartProvider from "../context/cart/CartProvider";
 import OrderContainer from "../components/OrderContainer/OrderContainer";
+import CheckoutContainer from "../components/CheckouContainer/CheckoutContainer";
 
 
   function AppRouter() {
@@ -23,6 +24,7 @@ import OrderContainer from "../components/OrderContainer/OrderContainer";
             <Route path="/item/:id" element={< ItemDetailContainer />}/>
             <Route path="/cart" element={< ItemCartContainer />}/>
             <Route path="/orders" element={< OrderContainer />}/>
+            <Route path="/checkout" element={< CheckoutContainer />}/>
           </Routes>
         </CartProvider>
       </BrowserRouter>
