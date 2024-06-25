@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import CartContext from "../../context/cart/CartContext";
 
 function Checkout({ completeOrder }) {
+  const { cart, totalPriceCart } = useContext(CartContext);
   const [nameBuyer, setNameBuyer] = useState("");
   const [telBuyer, setTelBuyer] = useState("");
   const [emailBuyer, setEmailBuyer] = useState("");
@@ -12,14 +14,36 @@ function Checkout({ completeOrder }) {
       name: nameBuyer,
       tel: telBuyer,
       email: emailBuyer,
+      cart: cart,
+      totalPrice: totalPriceCart,
     };
     await completeOrder(buyer);
   };
 
   return (
     <Container className="mt-4">
-      <Row className="justify-content-center">
-        <Col xs={12} md={8} lg={6}>
+      <Row>
+        {/* Mostrar resumen del carrito */}
+        <Col xs={12} md={6}>
+          <h3>Resumen del Carrito:</h3>
+          {cart.map((item) => (
+            <div key={item.id}>
+                <img 
+                    src={item.image}
+                    alt={item.title}
+                    className="mr-3"
+                    style={{ maxWidth: "70px" }} />
+              <p>{item.title} - Cantidad: {item.quantity}</p>
+              <p>Precio por unidad: ${item.price}</p>
+              <hr />
+            </div>
+          ))}
+          <p className="mb-3 total">Total: ${totalPriceCart}</p>
+        </Col>
+
+        {/* Formulario de compra */}
+        <Col xs={12} md={6}>
+          <h3>Completa tu compra:</h3>
           <Form onSubmit={(e) => handleCompleteOrder(e)}>
             <Form.Group controlId="formName">
               <Form.Label>Nombre Completo</Form.Label>
