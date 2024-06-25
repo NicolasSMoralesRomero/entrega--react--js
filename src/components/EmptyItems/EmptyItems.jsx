@@ -1,9 +1,11 @@
+import "./EmptyItems.css"
+
 function EmptyItems({message}) {
     
 
     return (
         <div>
-            <span>{message}</span>
+            <span className="vacio">{message}</span>
         </div>
     )
 
