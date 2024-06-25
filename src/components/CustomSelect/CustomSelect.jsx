@@ -13,24 +13,26 @@ function CustomSelect({ handleCategorySelected, categories }) {
   };
 
   return (
-    <Dropdown show={isOpen} onToggle={(isOpen) => setIsOpen(isOpen)}>
-      <Dropdown.Toggle variant="primary" id="dropdown-basic">
-        {selectedOption}
-      </Dropdown.Toggle>
+    <div className="p-3">
+      <Dropdown show={isOpen} onToggle={(isOpen) => setIsOpen(isOpen)}>
+        <Dropdown.Toggle variant="primary" id="dropdown-basic">
+          {selectedOption}
+        </Dropdown.Toggle>
 
-      <Dropdown.Menu>
-        {categories.map((category) => (
-          <Dropdown.Item
-            key={category.id}
-            onClick={() => handleOptionClick(category.title)}
-          >
-            <Link to={`/category/${category.title}`}>
-              {category.title}
-            </Link>
-          </Dropdown.Item>
-        ))}
-      </Dropdown.Menu>
-    </Dropdown>
+        <Dropdown.Menu>
+          {categories.map((category) => (
+            <Dropdown.Item
+              key={category.id}
+              onClick={() => handleOptionClick(category.title)}
+            >
+              <Link to={`/category/${category.title}`}>
+                {category.title}
+              </Link>
+            </Dropdown.Item>
+          ))}
+        </Dropdown.Menu>
+      </Dropdown>
+    </div>
   );
 }
 

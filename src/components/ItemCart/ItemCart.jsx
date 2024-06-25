@@ -38,8 +38,7 @@ function ItemCart({ item }) {
         <Button
           variant="danger"
           size="sm"
-          onClick={() => handleDelete(item.id)} // Llama a la función handleDelete con el ID del item
-        >
+          onClick={() => handleDelete(item.id)}>
           Eliminar
         </Button>
       </div>

@@ -2,11 +2,13 @@ import Item from '../Item/Item';
 import { useState, useEffect } from 'react';
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 import CustomSelect from '../CustomSelect/CustomSelect';
+import SpinnerCarga from "../Spinner/SpinnerCarga"
 
 
 function ItemList () {
     const [products, setProducts] = useState([]);
     const [categories, setCategories] = useState([])
+    const [loading, setLoading] = useState(true);
 
     useEffect(() =>{
         (async ()=>{
@@ -20,10 +22,12 @@ function ItemList () {
 
     useEffect(() =>{
         (async ()=>{
+        setLoading(true)
         const db = getFirestore();
         const docsRef = collection(db, "products");
         const querySnapshop = await getDocs(docsRef)
         setProducts(querySnapshop.docs.map(doc => ({id:doc.id,...doc.data()})))
+        setLoading(false)
         })()
 
     },[])
@@ -43,6 +47,11 @@ function ItemList () {
             setProducts(querySnapshop.docs.map(doc => ({id:doc.id,...doc.data()})))
             })()
     }
+
+    if (loading) {
+        return <SpinnerCarga/>;
+    }
+
     return (
         <>
         <div>

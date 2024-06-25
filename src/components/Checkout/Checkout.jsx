@@ -23,7 +23,7 @@ function Checkout({ completeOrder }) {
   return (
     <Container className="mt-4">
       <Row>
-        {/* Mostrar resumen del carrito */}
+        
         <Col xs={12} md={6}>
           <h3>Resumen del Carrito:</h3>
           {cart.map((item) => (
@@ -41,7 +41,7 @@ function Checkout({ completeOrder }) {
           <p className="mb-3 total">Total: ${totalPriceCart}</p>
         </Col>
 
-        {/* Formulario de compra */}
+        
         <Col xs={12} md={6}>
           <h3>Completa tu compra:</h3>
           <Form onSubmit={(e) => handleCompleteOrder(e)}>
